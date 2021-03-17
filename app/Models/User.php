@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Mutator
+    public function getRolesAttribute()
+    {
+        return $this->role == 0 ? 'Admin' : 'Super-Admin';
+    }
 }
