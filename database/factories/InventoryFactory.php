@@ -23,7 +23,7 @@ class InventoryFactory extends Factory
     {
         return [
             'name' => $this->faker->firstNameMale,
-            'img'  => '',
+            'img'  => 'img_inventory/',
         ];
     }
 }
