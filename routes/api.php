@@ -11,4 +11,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('login', LoginController::class);
 
-Route::get('inventory', [InventoryController::class, 'index']);
+Route::group(['middleware' => 'auth:sanctum'], function(){
+    Route::get('inventory', [InventoryController::class, 'index']);
+    // Route::get('inventory', [InventoryController::class, 'index']);
+});
+
