@@ -22,8 +22,11 @@ class InventoryFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->firstNameMale,
-            'img'  => 'img_inventory/',
+            'name'       => $this->faker->firstNameMale,
+            'img'        => 'img_inventory/inventory.jpg',
+            'stock_in'   => 100,
+            'price'      => 50000,
+            'category_id'=> rand(1,3),
         ];
     }
 }
